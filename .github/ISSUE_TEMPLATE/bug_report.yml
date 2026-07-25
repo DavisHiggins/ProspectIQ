@@ -1,0 +1,123 @@
+name: Bug report
+description: Something in ProspectIQ is not working as documented
+title: "bug: "
+labels: ["bug", "triage"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug.
+
+        **Before you post:** redact any real cookies, API keys, proxy URLs with
+        credentials, and other people's personal data from everything you paste
+        below. Issues are public and permanently indexed.
+
+  - type: checkboxes
+    id: preflight
+    attributes:
+      label: Preflight
+      options:
+        - label: I am on the latest release
+          required: true
+        - label: I searched existing issues and did not find this
+          required: true
+        - label: I have removed all credentials and third-party personal data from this report
+          required: true
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What did you expect, and what happened instead?
+      placeholder: |
+        Expected: collecting a GitHub profile writes a CSV
+        Actual: it exits with "Could not extract profile data"
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: The exact command, and a username that reproduces it if that matters.
+      placeholder: |
+        1. prospectiq collect --source github --username <handle>
+        2. ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: output
+    attributes:
+      label: Output
+      description: >
+        Re-run with --verbose and paste the output. This is automatically
+        formatted as code — check it for credentials before submitting.
+      render: shell
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: ProspectIQ version
+      description: Output of `prospectiq --version`
+      placeholder: ProspectIQ 0.1.0
+    validations:
+      required: true
+
+  - type: input
+    id: python-version
+    attributes:
+      label: Python version
+      description: Output of `python --version`
+      placeholder: Python 3.11.9
+    validations:
+      required: true
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating system
+      options:
+        - Linux
+        - macOS
+        - Windows
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: source
+    attributes:
+      label: Which source is affected
+      description: Choose "Not source-specific" for CLI, export, or config issues.
+      options:
+        - Not source-specific
+        - Instagram
+        - TikTok
+        - LinkedIn
+        - GitHub
+        - YouTube
+        - Twitch
+        - Pinterest
+        - Link-in-bio
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: demo-works
+    attributes:
+      label: Does the offline demo work?
+      description: >
+        Run `prospectiq --demo`. It uses no network and no credentials, so it
+        separates installation problems from source-specific ones.
+      options:
+        - label: "`prospectiq --demo` runs successfully"
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Anything else
+      description: Proxy in use, unusual configuration, when it started failing.

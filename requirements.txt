@@ -1,0 +1,10 @@
+# ProspectIQ runtime dependencies.
+#
+# pyproject.toml is the single source of truth for dependency versions; this
+# file installs the project itself so `pip install -r requirements.txt` and
+# `pip install .` can never drift apart.
+#
+# Development tooling:   pip install -e ".[dev]"
+# Free-proxy support:    pip install -e ".[proxy]"
+
+-e .

@@ -1,0 +1,18 @@
+# ProspectIQ proxy list
+#
+# Copy to proxies.txt and set PROSPECTIQ_PROXY_FILE=proxies.txt
+# One proxy per line. Lines starting with # are ignored.
+#
+# proxies.txt is gitignored because proxy URLs usually embed credentials.
+# Never commit a populated proxy list.
+#
+# Format: scheme://[username:password@]host:port
+
+# Residential proxy with auth:
+# http://username:password@gate.example-proxy.com:7000
+
+# Datacenter proxy with auth:
+# http://username:password@proxy.example.com:8080
+
+# Proxy without auth:
+# http://proxy.example.com:8080

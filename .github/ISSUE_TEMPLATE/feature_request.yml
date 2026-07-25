@@ -1,0 +1,89 @@
+name: Feature request
+description: Suggest a capability or improvement
+title: "feat: "
+labels: ["enhancement", "triage"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the suggestion.
+
+        Please check [ROADMAP.md](../blob/main/ROADMAP.md) first — it lists what
+        is already planned, and what is permanently out of scope.
+
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: Scope check
+      description: >
+        ProspectIQ is a responsible data-collection tool. Some capabilities are
+        permanently excluded regardless of implementation quality.
+      options:
+        - label: >
+            This does not involve CAPTCHA bypass, stealth or fingerprint evasion,
+            credential collection, mass messaging, or accessing private or
+            paywalled data
+          required: true
+        - label: I checked the roadmap and existing issues
+          required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem does this solve?
+      description: >
+        Describe the situation you are actually in, not the solution. This often
+        surfaces a better fix than the one first imagined.
+      placeholder: >
+        When a run of 400 usernames fails partway through, I lose everything
+        collected so far and have to start over.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What would you like it to do?
+      placeholder: >
+        Write progress to a state file so `--resume` can continue an interrupted run.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Which area does this affect?
+      options:
+        - New source
+        - Enrichment or scoring
+        - Export formats
+        - CLI or interactive mode
+        - Configuration
+        - Documentation
+        - Performance
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives you considered
+      description: Including workarounds you are using now.
+
+  - type: textarea
+    id: source-details
+    attributes:
+      label: For a new source
+      description: >
+        Which public endpoint or page exposes the data, what fields are
+        available, and does it require authentication? Only publicly accessible
+        data is in scope.
+
+  - type: checkboxes
+    id: contribution
+    attributes:
+      label: Contribution
+      options:
+        - label: I am willing to open a pull request for this
