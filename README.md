@@ -474,10 +474,6 @@ Security issues: see [SECURITY.md](SECURITY.md). Please do not open a public iss
 
 MIT — see [LICENSE](LICENSE).
 
-ProspectIQ is a rebranded and substantially modified derivative of the MIT licensed
-[Scout](https://github.com/kiryano/Scout) project. See [ATTRIBUTION.md](ATTRIBUTION.md)
-for what was inherited and what was rewritten.
-
 ## Maintainer
 
 **Davis Higgins**  
