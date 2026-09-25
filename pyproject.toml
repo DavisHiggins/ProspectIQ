@@ -5,7 +5,7 @@ build-backend = "hatchling.build"
 [project]
 name = "prospectiq"
 dynamic = ["version"]
-description = "Open-source lead intelligence, profile enrichment, and contact-data export from a unified Python CLI."
+description = "Open-source lead intelligence that turns public profiles into structured, traceable, locally controlled records."
 readme = "README.md"
 requires-python = ">=3.10"
 license = { file = "LICENSE" }
@@ -51,6 +51,7 @@ dev = [
     "pytest-cov>=5.0",
     "ruff>=0.6",
     "mypy>=1.11",
+    "Pillow>=10.0",
     "types-requests>=2.31",
     "pre-commit>=3.7",
 ]

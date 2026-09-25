@@ -20,24 +20,28 @@ from prospectiq.config import Config
 from prospectiq.constants import (
     APP_NAME,
     APP_TAGLINE,
-    CAROLINA_BLUE,
-    CAROLINA_BLUE_DARK,
-    CAROLINA_BLUE_DIM,
+    GLASS_TEAL,
+    INTELLIGENCE_TEAL,
     REPO_SLUG,
+    SIGNAL_GOLD,
+    SOFT_CYAN,
+    STRUCTURAL_NAVY,
 )
 
-#: Rich theme mapping semantic roles onto the Carolina blue palette.
+#: Rich theme mapping semantic roles onto the ProspectIQ brand palette.
 THEME = Theme(
     {
-        "accent": CAROLINA_BLUE,
-        "accent.dim": CAROLINA_BLUE_DIM,
-        "accent.dark": CAROLINA_BLUE_DARK,
+        "accent": INTELLIGENCE_TEAL,
+        "accent.dim": SOFT_CYAN,
+        "accent.dark": GLASS_TEAL,
+        "signal": SIGNAL_GOLD,
+        "structure": STRUCTURAL_NAVY,
         "success": "green",
         "warning": "yellow",
         "danger": "red",
         "body": "white",
         "muted": "dim",
-        "prompt.choices": CAROLINA_BLUE,
+        "prompt.choices": INTELLIGENCE_TEAL,
         "prompt.default": "dim",
     }
 )
@@ -133,11 +137,11 @@ def render_banner(console: Console, config: Config) -> None:
 
     if GLYPHS.unicode_ok:
         wordmark = _WORDMARK if console.width >= WORDMARK_MIN_WIDTH else _NARROW_WORDMARK
-        console.print(Text(wordmark, style=f"bold {CAROLINA_BLUE}"))
+        console.print(Text(wordmark, style=f"bold {INTELLIGENCE_TEAL}"))
 
     console.print(
         Text.assemble(
-            (APP_NAME.upper(), f"bold {CAROLINA_BLUE}"),
+            (APP_NAME.upper(), f"bold {INTELLIGENCE_TEAL}"),
             ("  ", ""),
             (APP_TAGLINE, "body"),
             ("  ", ""),
@@ -187,7 +191,7 @@ def print_info(console: Console, message: str) -> None:
 def print_section(console: Console, title: str, subtitle: str = "") -> None:
     """Print a section heading."""
     console.print()
-    heading = Text.assemble((title, f"bold {CAROLINA_BLUE}"))
+    heading = Text.assemble((title, f"bold {INTELLIGENCE_TEAL}"))
     if subtitle:
         heading.append(f"  {subtitle}", style="dim")
     console.print(heading)
@@ -203,9 +207,9 @@ def lead_table(leads: list, title: str = "Leads") -> Table:
     """
     table = Table(
         title=title,
-        title_style=f"bold {CAROLINA_BLUE}",
+        title_style=f"bold {INTELLIGENCE_TEAL}",
         title_justify="left",
-        header_style=f"bold {CAROLINA_BLUE_DIM}",
+        header_style=f"bold {SOFT_CYAN}",
         border_style="accent.dark",
         padding=(0, 1),
     )

@@ -16,8 +16,8 @@ from typing import Final
 APP_NAME: Final[str] = "ProspectIQ"
 APP_TAGLINE: Final[str] = "Open-Source Lead Intelligence"
 APP_DESCRIPTION: Final[str] = (
-    "Open-source lead intelligence, profile enrichment, and contact-data "
-    "export from a unified Python CLI."
+    "Open-source lead intelligence that turns public profiles into structured, "
+    "traceable, locally controlled records."
 )
 
 MAINTAINER: Final[str] = "Davis Higgins"
@@ -38,12 +38,19 @@ UPSTREAM_PROJECT: Final[str] = "Scout"
 UPSTREAM_REPO_URL: Final[str] = "https://github.com/kiryano/Scout"
 
 # --------------------------------------------------------------------------
-# Terminal palette — Carolina blue accent
+# Brand palette — dark navy, intelligence teal, and signal gold
 # --------------------------------------------------------------------------
 
-CAROLINA_BLUE: Final[str] = "#7BAFD4"
-CAROLINA_BLUE_DIM: Final[str] = "#4B7C99"
-CAROLINA_BLUE_DARK: Final[str] = "#2E4E5F"
+CANVAS_MIDNIGHT: Final[str] = "#001019"
+DEEP_NAVY: Final[str] = "#0E272F"
+STRUCTURAL_NAVY: Final[str] = "#143D49"
+GLASS_TEAL: Final[str] = "#225E6A"
+INTELLIGENCE_TEAL: Final[str] = "#2999A3"
+SOFT_CYAN: Final[str] = "#9CC6CF"
+SIGNAL_GOLD: Final[str] = "#C9B171"
+BRIGHT_GOLD: Final[str] = "#D6A84B"
+SOFT_WHITE: Final[str] = "#F5F8FA"
+MUTED_SLATE: Final[str] = "#8FA5B0"
 
 STYLE_SUCCESS: Final[str] = "green"
 STYLE_WARNING: Final[str] = "yellow"

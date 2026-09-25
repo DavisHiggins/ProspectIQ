@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="430" viewBox="0 0 1440 430" role="img" aria-labelledby="title desc">
+  <title id="title">ProspectIQ pipeline</title>
+  <desc id="desc">Public sources pass through collection, normalization, enrichment, scoring, and CSV export.</desc>
+  <defs>
+    <linearGradient id="canvas" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#001019"/>
+      <stop offset="1" stop-color="#0E272F"/>
+    </linearGradient>
+    <linearGradient id="flow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#225E6A"/>
+      <stop offset="0.52" stop-color="#2999A3"/>
+      <stop offset="1" stop-color="#C9B171"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" fill="none" stroke="#143D49" stroke-width="1" opacity=".35"/>
+    </pattern>
+    <style>
+      .label { font: 700 17px system-ui, sans-serif; letter-spacing: 2px; fill: #F5F8FA; }
+      .small { font: 500 14px system-ui, sans-serif; fill: #8FA5B0; }
+      .eyebrow { font: 700 13px system-ui, sans-serif; letter-spacing: 3px; fill: #C9B171; }
+      .title { font: 700 28px system-ui, sans-serif; fill: #F5F8FA; }
+      .card { fill: #0E272F; stroke: #225E6A; stroke-width: 1.5; }
+    </style>
+  </defs>
+  <rect width="100%" height="100%" rx="20" fill="url(#canvas)"/>
+  <rect width="100%" height="100%" rx="20" fill="url(#grid)"/>
+  <text x="72" y="68" class="eyebrow">PUBLIC DATA → STRUCTURED RECORDS</text>
+  <text x="72" y="108" class="title">One traceable path from source to local CSV</text>
+  <path d="M170 245H1270" stroke="url(#flow)" stroke-width="4" opacity=".9"/>
+  <rect x="85" y="177" width="200" height="136" rx="15" class="card"/>
+  <circle cx="185" cy="245" r="30" fill="#001019" stroke="#2999A3" stroke-width="3"/>
+  <circle cx="185" cy="245" r="7" fill="#2999A3" filter="url(#glow)"/>
+  <text x="185" y="342" text-anchor="middle" class="label">COLLECT</text>
+  <text x="185" y="370" text-anchor="middle" class="small">public profiles</text>
+  <path d="M289 245h42" stroke="#9CC6CF" stroke-width="2" opacity=".65"/>
+  <rect x="345" y="177" width="200" height="136" rx="15" class="card"/>
+  <circle cx="445" cy="245" r="30" fill="#001019" stroke="#2999A3" stroke-width="3"/>
+  <circle cx="445" cy="245" r="7" fill="#2999A3" filter="url(#glow)"/>
+  <text x="445" y="342" text-anchor="middle" class="label">NORMALIZE</text>
+  <text x="445" y="370" text-anchor="middle" class="small">one Lead schema</text>
+  <path d="M549 245h42" stroke="#9CC6CF" stroke-width="2" opacity=".65"/>
+  <rect x="605" y="177" width="200" height="136" rx="15" class="card"/>
+  <circle cx="705" cy="245" r="30" fill="#001019" stroke="#2999A3" stroke-width="3"/>
+  <circle cx="705" cy="245" r="7" fill="#2999A3" filter="url(#glow)"/>
+  <text x="705" y="342" text-anchor="middle" class="label">ENRICH</text>
+  <text x="705" y="370" text-anchor="middle" class="small">contact evidence</text>
+  <path d="M809 245h42" stroke="#9CC6CF" stroke-width="2" opacity=".65"/>
+  <rect x="865" y="177" width="200" height="136" rx="15" class="card"/>
+  <circle cx="965" cy="245" r="30" fill="#001019" stroke="#C9B171" stroke-width="3"/>
+  <circle cx="965" cy="245" r="7" fill="#C9B171" filter="url(#glow)"/>
+  <text x="965" y="342" text-anchor="middle" class="label">SCORE</text>
+  <text x="965" y="370" text-anchor="middle" class="small">additive rules</text>
+  <path d="M1069 245h42" stroke="#9CC6CF" stroke-width="2" opacity=".65"/>
+  <rect x="1125" y="177" width="200" height="136" rx="15" class="card"/>
+  <circle cx="1225" cy="245" r="30" fill="#001019" stroke="#C9B171" stroke-width="3"/>
+  <circle cx="1225" cy="245" r="7" fill="#C9B171" filter="url(#glow)"/>
+  <text x="1225" y="342" text-anchor="middle" class="label">EXPORT</text>
+  <text x="1225" y="370" text-anchor="middle" class="small">stable columns</text>
+</svg>
